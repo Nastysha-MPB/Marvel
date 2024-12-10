@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.marvel_app.ui.screens.HeroDetailScreen
-import com.example.marvel_app.ui.screens.HeroListScreen
+import com.example.myapplication.ui.screens.HeroDetailScreen
+import com.example.myapplication.ui.screens.HeroListScreen
 
 @Composable
 fun Navigation() {
