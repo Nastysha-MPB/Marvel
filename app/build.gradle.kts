@@ -1,4 +1,8 @@
 plugins {
+    //id ("com.android.application")
+    //id ("org.jetbrains.kotlin.android")
+    //id("kotlin-kapt")
+
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 
@@ -6,21 +10,12 @@ plugins {
     id("com.google.dagger.hilt.android")
 }
 
+
+
 android {
     namespace = "com.example.marvel_app"
     compileSdk = 35
 
-    buildFeatures{
-        compose = true
-    }
-
-    composeOptions{
-        kotlinCompilerExtensionVersion = "1.5.15"
-    }
-
-    kotlinOptions{
-        jvmTarget = "19"
-    }
 
     defaultConfig {
         applicationId = "com.example.marvel_app"
@@ -44,10 +39,23 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+    compileOptions{
+        sourceCompatibility = JavaVersion.VERSION_19
+        targetCompatibility = JavaVersion.VERSION_19
     }
+
+    buildFeatures{
+        compose = true
+    }
+
+    composeOptions{
+        kotlinCompilerExtensionVersion = "1.9.23"
+    }
+
+    kotlinOptions{
+        jvmTarget = "17"
+    }
+
     //kotlinOptions {
         //jvmTarget = "17"
     //}
@@ -65,6 +73,8 @@ android {
 }
 
 dependencies {
+
+    //implementation(libs.kotlin.stdlib.jdk8)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
